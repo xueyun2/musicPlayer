@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./js/rem.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>播放器</title>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/slid.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/audio.css">
+</head>
+<body>
+    <header class="herd flex flex-1 align-v-center">
+        <div class="flex align-v-center p-lr-20">
+            <img class="logo" src="https://wechatapppro-1252524126.file.myqcloud.com/appqfeaipeE1699/image/b_u_61c14cfb10138_nbT9zIaJ/l3mrejgu0p5j.png" alt="">
+            <div class="m-l-10 font-16">好成绩在线英语</div>
+        </div>
+    </header>
+    <div class="flex align-v-center align-h-center p-tb-20 ">
+        <div class="rela">
+            <img src="./img/414320573kwucdx430nv3.png" alt="" class="cover">
+            <div class="abso font-12 type p-lr-6">音频</div>
+        </div>
+    </div>
+    <div class="flex align-h-around control">
+        <img src="./img/alone.png" alt="" id="set-cycle">
+        <img src="./img/speed1.png" alt="" id="speed">
+    </div>
+    <div class="p-lr-20 m-t-25">
+        <div class="flex schedule rela">
+            <div class="abso filling"></div>
+            <div class="abso slid p-lr-5 font-12 p-tb-2" id="slid">
+                <div class="abso slid slid-top p-lr-10 p-tb-5 font-12 p-tb-2" id="slid-top"><span class="current-time">00:01</span>/<span class="total-time">00:26</span></div>
+                <div class="flex"> <span class="current-time">00:00</span> / <span class="total-time">00:00</span> </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="control-butt flex align-h-between m-t-30 p-lr-20 align-v-center">
+        <img src="./img/retreat15.svg" alt="" class="speed-butt animated-05" id="retreat">
+        <div class="flex align-v-center">
+            <img src="./img/previous.png" alt="" class="previous butt">
+            <img src="./img/pause.png" alt="" class="pause m-lr-24" id="play-butt">
+            <img src="./img/next.png" alt="" class="next butt">
+        </div>
+        <img src="./img/speed15.svg" alt="" class="speed-butt animated-05" id="goAhead">
+    </div>
+    <!-- 设置倍率 -->
+    <div class=" white-color popup fadeInUpBig animated-05" id="popup-speed">
+        <ul class=" ">
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed05.png" data-value="0.5"> 0.5x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed075.png" data-value="0.75"> 0.75x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item active" data-src="./img/speed1.png" data-value="1"> 正常倍速 </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed125.png" data-value="1.25"> 1.25x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed15.png" data-value="1.5"> 1.5x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed20.png" data-value="2.0"> 2.0x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed25.png" data-value="2.5"> 2.5x </li>
+            <li class="border-bottom p-tb-20 font-center speed-item " data-src="./img/speed30.png" data-value="3.0"> 3.0x </li>
+        </ul>
+        <div class="p-tb-20 font-center cancel">取消</div>
+    </div>
+    <!-- 设置循环 -->
+    <div class=" white-color popup fadeInUpBig animated-05" id="cycle">
+        <ul class=" ">
+            <li class="border-bottom p-tb-20 font-center cycle-item " data-src="./img/alone.png" data-value="single">  单曲播放  </li>
+            <li class="border-bottom p-tb-20 font-center cycle-item " data-src="./img/Single.png" data-value="singleCycle"> 单曲循环 </li>
+            <li class="border-bottom p-tb-20 font-center cycle-item active" data-src="./img/order.png" data-value="order"> 顺序播放 </li>
+            <li class="border-bottom p-tb-20 font-center cycle-item " data-src="./img/cycle.png" data-value="list"> 列表循环 </li>
+        </ul>
+        <div class="p-tb-20 font-center cancel">取消</div>
+    </div>
+    <div class="mask fadeIn animated"></div>
+    <audio src="./audio/1638781392_kwug1qrs0r2n.mp3" class="audio-control"></audio>
+    <script src="./js/util.js"></script>
+    <script src="./js/slid.js"></script>
+    <script src="./js/audio.js"></script>
+</body>
+</html>

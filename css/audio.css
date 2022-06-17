@@ -1,0 +1,157 @@
+.cover {
+    width: 7.55rem;
+    height: 5.65rem;
+}
+
+.control img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.type {
+    background: rgba(0, 0, 0, .5);
+    right: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+/*进度条*/
+.schedule {
+    width: 100%;
+    height: 0.1rem;
+    background: #999;
+}
+
+.schedule .filling {
+    background: #333;
+    width: 0;
+    height: 0.1rem;
+    left: 0;
+    top: 0;
+    /*transition: 0.2s all;*/
+
+}
+
+.schedule .slid {
+    background: #333333;
+    color: #fff;
+    border-radius: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: 0.2s all;
+    /*width: 3.2rem;*/
+}
+
+.schedule .slid-top {
+    top: -1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF9646;
+    display: none;
+}
+
+/*播放控件*/
+.control-butt .pause {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.control-butt .butt {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.control-butt .speed-butt {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* 弹窗 */
+.popup {
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 85;
+    width: 100%;
+    display: none;
+}
+
+.popup .active {
+    color: #1472ff;
+}
+
+.popup .cancel {
+    border-top: .5rem solid #f6f6f6;
+}
+
+.popup .speed-item,
+.popup .cycle-item {
+    border-color: #ededed;
+}
+
+.popup .speed-item:last-child,
+.popup .cycle-item:last-child {
+    border-bottom: none;
+}
+
+/* 遮罩 */
+.mask {
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+
+/* 寻转动画 */
+@keyframes rotateRight {
+
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+
+}
+.rotate-right {
+    animation-name: rotateRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes rotateLeft {
+
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+
+}
+.rotate-left {
+    animation-name: rotateLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+/* 顶部导航 */
+.herd{
+    height: 2.9rem;
+    box-shadow: 0 0.04rem 1rem 0px rgb(0 0 0 / 5%);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.herd .logo{
+    width: 2rem;
+    height: 2rem;
+}
