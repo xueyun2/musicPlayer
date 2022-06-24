@@ -39,12 +39,12 @@ let slid = new Slid({
 //音频加载完成
 audio.oncanplay = function () {
     audio.playbackRate = 1
+    slid.totalDuration = Math.floor(audio.duration)
     setTime()
 }
 //监听音频播放
 let cont = 0
 audio.ontimeupdate = function () {
-    slid.totalTime = fNumToDate(Math.floor(audio.duration))
     let current = Math.floor(audio.currentTime)
 
     if (current - cont == 1 && isUpdate) {
