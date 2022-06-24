@@ -7,7 +7,7 @@ function Slid(config) {
     this.slideEventBack = config.slideEventBack || function () { }
     this.pressEventBack = config.pressEventBack || function () { }
     this.liftEventBack = config.liftEventBack || function () { }
-    
+
     this.slidEvent()
 }
 
